@@ -1,6 +1,15 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 375,
+      md: 768,
+      lg: 1200,
+      xl: 1440,
+    },
+  },
   palette: {
     primary: {
       main: "#0B0D17",
@@ -29,7 +38,7 @@ const theme = createTheme({
     h5: {
       fontFamily: "'Barlow Condensed', sans-serif",
       fontSize: "1.75rem",
-      letterSpacing: "4.75em",
+      letterSpacing: "4.75px",
     },
     subtitle1: {
       fontSize: "1.75rem",
@@ -37,12 +46,12 @@ const theme = createTheme({
     subtitle2: {
       fontFamily: "'Barlow Condensed', sans-serif",
       fontSize: "0.875rem",
-      letterSpacing: "2.35rem",
+      letterSpacing: "2.35px",
     },
     navText: {
       fontFamily: "'Barlow Condensed', sans-serif",
       fontSize: "1rem",
-      letterSpacing: "2.7rem",
+      letterSpacing: "2.7px",
     },
   },
 });

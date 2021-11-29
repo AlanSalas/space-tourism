@@ -1,12 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
+import Nav from "components/Nav";
 
 const index = () => {
   return (
-    <div>
-      <h1>layout</h1>
+    <Box sx={{ height: "100vh", pt: "2.5rem" }}>
+      <Nav />
       <Outlet />
-    </div>
+    </Box>
   );
 };
 
