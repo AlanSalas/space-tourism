@@ -35,7 +35,7 @@ const Nav = () => {
         />
         {links &&
           links.map((link) => (
-            <NavLink key={link.number} number={link.number} title={link.title} />
+            <NavLink key={link.number} number={link.number} title={link.title} route={link.route} />
           ))}
       </NavBlur>
     </Stack>
