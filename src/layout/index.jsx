@@ -1,15 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Page } from "components/styled";
 import Nav from "components/Nav";
 
-const index = () => {
+const Layout = () => {
   return (
-    <Box sx={{ height: "100vh", pt: "2.5rem" }}>
+    <Page>
       <Nav />
       <Outlet />
-    </Box>
+    </Page>
   );
 };
 
-export default index;
+export default Layout;
