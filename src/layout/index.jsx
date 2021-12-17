@@ -7,16 +7,16 @@ import { backgrounds } from "constants/backgrounds";
 
 const Layout = () => {
   const location = useLocation();
-  const desktop = useMediaQuery("(min-width:768px)") && "desktop";
-  const tablet = useMediaQuery("(min-width:375px)") && "tablet";
-  const mobile = useMediaQuery("(max-width:375px)") && "mobile";
+  const desktop = useMediaQuery("(min-width:769px)") && "desktop";
+  const tablet = useMediaQuery("(min-width:482px)") && "tablet";
+  const mobile = useMediaQuery("(max-width:481px)") && "mobile";
   const size = desktop || tablet || mobile;
   const sizes = backgrounds[location.pathname];
   const background = sizes[size];
 
   return (
-    <Page background={background && background}>
-      <Nav />
+    <Page background={background && background} size={size.toString()}>
+      <Nav size={size.toString()} />
       <Outlet />
     </Page>
   );

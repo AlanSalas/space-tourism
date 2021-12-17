@@ -1,10 +1,19 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          overflow: "hidden",
+        },
+      },
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,
-      sm: 375,
+      sm: 481,
       md: 768,
       lg: 1200,
       xl: 1440,

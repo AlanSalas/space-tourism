@@ -1,11 +1,11 @@
 import { Box, Stack, styled } from "@mui/material";
 
-export const Page = styled(Box)(({ background }) => ({
+export const Page = styled(Box)(({ background, size }) => ({
   background: `url(${background})`,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   height: "100vh",
-  paddingTop: "2.5rem",
+  paddingTop: size === "desktop" ? "2.5rem" : "0",
   transition: "background ease .5s",
   width: "100%",
 }));
@@ -22,5 +22,18 @@ export const NavBlur = styled(Stack)({
   height: "100%",
   overflow: "visible",
   position: "relative",
-  width: "58%",
 });
+
+export const NavMobile = styled(Stack)(({ open }) => ({
+  background: "rgba(255, 255, 255, 0.04)",
+  backdropFilter: "blur(81.5485px)",
+  position: "absolute",
+  top: "0",
+  right: "0",
+  height: "100%",
+  width: "70%",
+  paddingTop: "7rem",
+  textAlign: "left",
+  transform: open ? "translateX(0)" : "translateX(100%)",
+  transition: "transform ease .5s",
+}));
