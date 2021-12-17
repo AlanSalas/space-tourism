@@ -1,16 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Typography } from "@mui/material";
 
 const NavLink = ({ number, title, route }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <Typography
       onClick={() => navigate(route)}
       variant="navText"
       sx={{
-        borderBottom: "3px solid transparent",
+        borderBottom: location.pathname === route ? "3px solid #FFFFFF" : "3px solid transparent",
         color: "tertiary.main",
         cursor: "pointer",
         height: "100%",

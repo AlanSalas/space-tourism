@@ -1,17 +1,9 @@
 import React from "react";
-import { Stack, Box, styled } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import NavLink from "components/NavLink";
+import { NavBlur } from "components/styled";
 import Logo from "assets/shared/logo.svg";
 import links from "constants/links";
-
-const NavBlur = styled(Stack)({
-  background: "rgba(255, 255, 255, 0.04)",
-  backdropFilter: "blur(81.5485px)",
-  height: "100%",
-  overflow: "visible",
-  position: "relative",
-  width: "58%",
-});
 
 const Nav = () => {
   return (
