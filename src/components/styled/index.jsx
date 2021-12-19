@@ -1,7 +1,7 @@
 import { Box, Stack, styled } from "@mui/material";
 
 export const Page = styled(Box)(({ background, size }) => ({
-  background: `url(${background})`,
+  background: background ? `url(${background})` : "#000000",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   height: "100vh",
@@ -37,3 +37,22 @@ export const NavMobile = styled(Stack)(({ open }) => ({
   transform: open ? "translateX(0)" : "translateX(100%)",
   transition: "transform ease .5s",
 }));
+
+export const ButtonExplore = styled("button")({
+  background: "#FFFFFF",
+  outline: "none",
+  border: "none",
+  height: "274px",
+  width: "274px",
+  borderRadius: "100%",
+  marginTop: "auto",
+  cursor: "pointer",
+  transition: "outline ease .4s",
+  "&:hover": {
+    outline: "5.5rem solid rgba(255, 255, 255, 0.1)",
+  },
+});
+
+export const Divider = styled("hr")({
+  background: "#383B4B",
+});

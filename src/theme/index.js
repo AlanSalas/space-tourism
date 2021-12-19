@@ -13,7 +13,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 376,
+      sm: 481,
       md: 768,
       lg: 1200,
       xl: 1440,
@@ -28,6 +28,7 @@ const theme = createTheme({
     },
     tertiary: {
       main: "#FFFFFF",
+      opacity: "rgba(255,255,255,0.25)",
     },
   },
   typography: {
@@ -61,6 +62,11 @@ const theme = createTheme({
       fontFamily: "'Barlow Condensed', sans-serif",
       fontSize: "1rem",
       letterSpacing: "2.7px",
+    },
+    bodyText: {
+      fontFamily: "'Barlow Condensed', sans-serif",
+      fontSize: "1.3rem",
+      lineHeight: "2rem",
     },
   },
 });

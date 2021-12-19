@@ -8,8 +8,8 @@ import { backgrounds } from "constants/backgrounds";
 const Layout = () => {
   const location = useLocation();
   const desktop = useMediaQuery("(min-width:769px)") && "desktop";
-  const tablet = useMediaQuery("(min-width:376px)") && "tablet";
-  const mobile = useMediaQuery("(max-width:375px)") && "mobile";
+  const tablet = useMediaQuery("(min-width:482px)") && "tablet";
+  const mobile = useMediaQuery("(max-width:481px)") && "mobile";
   const size = desktop || tablet || mobile;
   const sizes = backgrounds[location.pathname];
   const background = sizes[size];
