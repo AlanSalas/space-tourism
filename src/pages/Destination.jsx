@@ -6,7 +6,7 @@ import { Divider } from "components/styled";
 import { planets } from "constants/planets";
 
 const Destination = () => {
-  const [destinations, setDestinations] = useState(destinationsJson?.destinations);
+  const [destinations] = useState(destinationsJson?.destinations);
   const [currentDestination, setCurrentDestination] = useState(destinations[0]);
 
   const handleChangeDestination = (destination) => {
