@@ -38,6 +38,7 @@ const theme = createTheme({
     },
     h2: {
       fontSize: "6.25rem",
+      textTransform: "uppercase",
     },
     h3: {
       fontSize: "3.5",
@@ -52,11 +53,13 @@ const theme = createTheme({
     },
     subtitle1: {
       fontSize: "1.75rem",
+      textTransform: "uppercase",
     },
     subtitle2: {
       fontFamily: "'Barlow Condensed', sans-serif",
       fontSize: "0.875rem",
       letterSpacing: "2.35px",
+      textTransform: "uppercase",
     },
     navText: {
       fontFamily: "'Barlow Condensed', sans-serif",
