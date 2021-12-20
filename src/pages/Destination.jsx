@@ -14,8 +14,6 @@ const Destination = () => {
     setCurrentDestination(newDestination);
   };
 
-  console.log(currentDestination);
-
   return (
     <Container sx={{ height: "100%" }}>
       <Stack direction="row" gap={19} sx={{ pb: 18 }}>

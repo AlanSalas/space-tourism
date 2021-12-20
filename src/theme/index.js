@@ -41,10 +41,12 @@ const theme = createTheme({
       textTransform: "uppercase",
     },
     h3: {
-      fontSize: "3.5",
+      fontSize: "3.5rem",
+      textTransform: "uppercase",
     },
     h4: {
       fontSize: "2rem",
+      textTransform: "uppercase",
     },
     h5: {
       fontFamily: "'Barlow Condensed', sans-serif",
