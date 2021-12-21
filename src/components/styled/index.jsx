@@ -53,6 +53,21 @@ export const ButtonExplore = styled("button")({
   },
 });
 
+export const Button = styled("button")({
+  backgroundColor: "transparent",
+  outline: "none",
+  border: "1px solid rgba(255,255,255,0.25)",
+  height: "80px",
+  width: "80px",
+  borderRadius: "100%",
+  cursor: "pointer",
+  transition: "border ease .4s, backgroundColor ease .4s",
+  color: "#FFFFFF",
+  "&:hover": {
+    border: "1px solid #FFFFFF",
+  },
+});
+
 export const Divider = styled("hr")({
   background: "#383B4B",
 });

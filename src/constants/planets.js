@@ -10,6 +10,11 @@ import CrewTwo from "assets/crew/image-mark-shuttleworth.png";
 import CrewThree from "assets/crew/image-victor-glover.png";
 import CrewFour from "assets/crew/image-anousheh-ansari.png";
 
+// Technologies portrait
+import TechOnePortrait from "assets/technology/image-launch-vehicle-portrait.jpg";
+import TechTwoPortrait from "assets/technology/image-spaceport-portrait.jpg";
+import TechThreePortrait from "assets/technology/image-space-capsule-portrait.jpg";
+
 export const planets = {
   Moon: ImageMoon,
   Mars: ImageMars,
@@ -22,4 +27,16 @@ export const crews = {
   "Mark Shuttleworth": CrewTwo,
   "Victor Glover": CrewThree,
   "Anousheh Ansari": CrewFour,
+};
+
+export const technologyImages = {
+  "Launch vehicle": {
+    portrait: TechOnePortrait,
+  },
+  Spaceport: {
+    portrait: TechTwoPortrait,
+  },
+  "Space capsule": {
+    portrait: TechThreePortrait,
+  },
 };
