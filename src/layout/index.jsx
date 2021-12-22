@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { backgrounds } from "constants/backgrounds";
 import { useMediaQuery } from "@mui/material";
 import { Page } from "components/styled";
 import Nav from "components/Nav";
-import { backgrounds } from "constants/backgrounds";
 
 const Layout = () => {
   const location = useLocation();
@@ -15,10 +15,14 @@ const Layout = () => {
   const background = sizes[size];
 
   return (
-    <Page background={background && background} size={size.toString()}>
-      <Nav size={size.toString()} />
-      <Outlet />
-    </Page>
+    <>
+      {background && (
+        <Page sx={{ backgroundImage: `url(${background})` }} size={size}>
+          <Nav size={size.toString()} />
+          <Outlet />
+        </Page>
+      )}
+    </>
   );
 };
 

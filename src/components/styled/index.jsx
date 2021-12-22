@@ -1,7 +1,7 @@
 import { Box, Stack, styled } from "@mui/material";
 
-export const Page = styled(Box)(({ background, size }) => ({
-  background: background ? `url(${background})` : "#000000",
+export const Page = styled(Box)(({ size }) => ({
+  background: "#000000",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   height: "100vh",
@@ -31,23 +31,31 @@ export const NavMobile = styled(Stack)(({ open }) => ({
   top: "0",
   right: "0",
   height: "100%",
-  width: "70%",
   paddingTop: "7rem",
   textAlign: "left",
   transform: open ? "translateX(0)" : "translateX(100%)",
   transition: "transform ease .5s",
+  width: "70%",
 }));
+
+export const ActionMobile = styled(Box)({
+  cursor: "pointer",
+  height: "21px",
+  marginRight: "1.5rem",
+  width: "24px",
+  position: "relative",
+  zIndex: 2,
+});
 
 export const ButtonExplore = styled("button")({
   background: "#FFFFFF",
-  outline: "none",
   border: "none",
-  height: "274px",
-  width: "274px",
   borderRadius: "100%",
-  marginTop: "auto",
   cursor: "pointer",
+  height: "274px",
+  outline: "none",
   transition: "outline ease .4s",
+  width: "274px",
   "&:hover": {
     outline: "5.5rem solid rgba(255, 255, 255, 0.1)",
   },
@@ -55,14 +63,14 @@ export const ButtonExplore = styled("button")({
 
 export const Button = styled("button")({
   backgroundColor: "transparent",
-  outline: "none",
   border: "1px solid rgba(255,255,255,0.25)",
-  height: "80px",
-  width: "80px",
   borderRadius: "100%",
-  cursor: "pointer",
-  transition: "border ease .4s, backgroundColor ease .4s",
   color: "#FFFFFF",
+  cursor: "pointer",
+  height: "80px",
+  outline: "none",
+  transition: "border ease .4s, backgroundColor ease .4s",
+  width: "80px",
   "&:hover": {
     border: "1px solid #FFFFFF",
   },

@@ -21,9 +21,9 @@ const NavLink = ({ number, title, route, size }) => {
         },
         pt: size === "mobile" ? 0 : 4.5,
         textTransform: "uppercase",
+        transition: "border ease .5s",
         ":hover": {
           borderBottom: "3px solid #979797",
-          transition: "border ease .5s",
         },
       }}
     >

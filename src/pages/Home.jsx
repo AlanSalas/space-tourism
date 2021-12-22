@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <Container sx={{ height: "100%" }}>
-      <Stack direction="row" justifyContent="space-between" sx={{ pb: 18 }}>
+      <Stack direction="row" justifyContent="space-between">
         <Box sx={{ maxWidth: "450px", pt: 31 }}>
           <Typography sx={{ color: "tertiary.main", mb: 2 }} variant="h5">
             SO, YOU WANT TO TRAVEL TO
@@ -21,7 +21,7 @@ const Home = () => {
             a truly out of this world experience!
           </Typography>
         </Box>
-        <ButtonExplore onClick={() => navigate("/destination")}>
+        <ButtonExplore sx={{ marginTop: "auto" }} onClick={() => navigate("/destination")}>
           <Typography variant="h4">EXPLORE</Typography>
         </ButtonExplore>
       </Stack>

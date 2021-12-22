@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import technologyJson from "data/technology.json";
+import { technologyImages } from "constants/planets";
 import { Box, Stack, Typography } from "@mui/material";
 import { Container, Button } from "components/styled";
-import { technologyImages } from "constants/planets";
+import { Title } from "components";
 
 const Technology = () => {
   const [technologies] = useState(technologyJson?.technology);
   const [currentTech, setCurrentTech] = useState(technologies[0]);
-  const [techImage, setTechImage] = useState(technologyImages[currentTech.name]);
+  const [techImage, setTechImage] = useState(technologyImages[currentTech?.name]);
 
   const handleChangeTechnology = (techName) => {
     const newTechnology = technologies.find((tech) => tech.name === techName);
@@ -19,14 +20,7 @@ const Technology = () => {
     <Container sx={{ margin: "0 0 0 auto", maxWidth: "88.5%" }}>
       <Stack direction="row" justifyContent="space-between">
         <Box sx={{ pt: 9 }}>
-          <Stack direction="row" sx={{ mb: 17 }}>
-            <Typography variant="h5" sx={{ mr: 3, fontWeight: "bold", color: "tertiary.opacity" }}>
-              03
-            </Typography>
-            <Typography variant="h5" sx={{ color: "tertiary.main" }}>
-              SPACE LAUNCH 101
-            </Typography>
-          </Stack>
+          <Title sx={{ mb: 17 }} number="03" title="SPACE LAUNCH 101" />
           <Stack direction="row" gap={10}>
             <Stack gap={4}>
               {technologies &&

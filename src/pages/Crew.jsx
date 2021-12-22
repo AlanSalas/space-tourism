@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import crewJson from "data/crew.json";
+import { crews } from "constants/planets";
 import { Box, Stack, Typography } from "@mui/material";
 import { Container } from "components/styled";
-import { crews } from "constants/planets";
+import { Title, Dot } from "components";
 
 const Crew = () => {
   const [crew] = useState(crewJson?.crew);
@@ -17,14 +18,7 @@ const Crew = () => {
     <Container sx={{ height: "90%" }}>
       <Stack direction="row" justifyContent="space-between" height="100%">
         <Box sx={{ pt: 9, height: "100%" }}>
-          <Stack direction="row" sx={{ mb: 19 }}>
-            <Typography variant="h5" sx={{ mr: 3, fontWeight: "bold", color: "tertiary.opacity" }}>
-              02
-            </Typography>
-            <Typography variant="h5" sx={{ color: "tertiary.main" }}>
-              MEET YOUR CREW
-            </Typography>
-          </Stack>
+          <Title sx={{ mb: 19 }} number="02" title="MEET YOUR CREW" />
           <Typography variant="h4" sx={{ color: "tertiary.opacity", mb: 2 }}>
             {currentCrew.role}
           </Typography>
@@ -41,19 +35,7 @@ const Crew = () => {
           <Stack direction="row" gap={2.5}>
             {crew &&
               crew.map((item) => (
-                <Box
-                  key={item.name}
-                  onClick={() => handleChangeCrew(item.name)}
-                  component="span"
-                  sx={{
-                    height: "20px",
-                    width: "20px",
-                    borderRadius: "100%",
-                    backgroundColor:
-                      currentCrew.name === item.name ? "tertiary.main" : "tertiary.opacity",
-                    cursor: "pointer",
-                  }}
-                />
+                <Dot item={item} currentItem={currentCrew.name} onClick={handleChangeCrew} />
               ))}
           </Stack>
         </Box>

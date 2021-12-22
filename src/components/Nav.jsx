@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import links from "constants/links";
 import { Stack, Box } from "@mui/material";
-import NavLink from "components/NavLink";
-import { NavBlur, NavMobile } from "components/styled";
+import { NavBlur, NavMobile, ActionMobile } from "components/styled";
+import { NavLink } from "components";
 import Logo from "assets/shared/logo.svg";
 import IconHamburger from "assets/shared/icon-hamburger.svg";
 import IconClose from "assets/shared/icon-close.svg";
-import links from "constants/links";
 
 const Nav = ({ size }) => {
   const [open, setOpen] = useState(false);
@@ -27,33 +27,9 @@ const Nav = ({ size }) => {
         {size === "mobile" && (
           <>
             {open ? (
-              <Box
-                onClick={() => setOpen(!open)}
-                component="img"
-                src={IconClose}
-                sx={{
-                  cursor: "pointer",
-                  height: 21,
-                  mr: "1.5rem",
-                  width: 24,
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              />
+              <ActionMobile component="img" src={IconClose} onClick={() => setOpen(!open)} />
             ) : (
-              <Box
-                onClick={() => setOpen(!open)}
-                component="img"
-                src={IconHamburger}
-                sx={{
-                  cursor: "pointer",
-                  height: 21,
-                  mr: "1.5rem",
-                  width: 24,
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              />
+              <ActionMobile component="img" src={IconHamburger} onClick={() => setOpen(!open)} />
             )}
           </>
         )}
